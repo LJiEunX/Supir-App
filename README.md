@@ -59,3 +59,21 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## RUN
+cd ~/Supir-App
+composer install
+cp .env.example .env
+php artisan key:generate
+open -e .env 
+==========================
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=supir_app_db (XAMPP)
+DB_USERNAME=root
+DB_PASSWORD=
+DB_SOCKET=/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
+===========================
+php artisan migrate
+php artisan serve
